@@ -23,14 +23,14 @@ object MyApp extends App {
         //books foreach(i => if (i.year == year) println(i))
     }
 
-//    val results = publishedIn(2015, books)
-//    print(results)
+    val results = publishedIn(2015, books)
+      print(results)
 
     //titles of books published after 1999
-    //books foreach (i => if (i.year > 1999) println(i.title))
+    books foreach (i => if (i.year > 1999) println(i.title))
 
     //books published from 1996 to 1997
-    //((1996 to 1997) flatMap (year => publishedIn(year, books))) foreach (b => println(b.title))
+    ((1996 to 1997) flatMap (year => publishedIn(year, books))) foreach (b => println(b.title))
 
   //counting the number of books whose author names start with a vowel
   val results = books.count(b => (b.authorSurname).toLowerCase.startsWith("a") | (b.authorSurname).toLowerCase.startsWith("e")
